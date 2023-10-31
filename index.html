@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X & O</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1 class="header">Game X & O</h1>
+
+      <input
+        type="number"
+        min="2"
+        max="8"
+        id="input"
+        class="inp"
+        placeholder="Input Number"
+      />
+      <button onclick="create_matrix()" class="btn">Play with friend</button>
+      <button class="btn" onclick="PlayWithComputer()">
+        Play with Computer
+      </button>
+      <div class="main" id="main"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
