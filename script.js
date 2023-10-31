@@ -176,14 +176,12 @@ function create_matrix() {
         let clock = Player == "X" ? timeX.textContent : time0.textContent;
         playmoves[p] = f[i] + z + " - " + clock + " : " + Player;
 
-        // Check for a win
         let horizontalWin = checkHorizontalWin(cells, inp_val);
         let verticalWin = checkVerticalWin(cells, inp_val);
         let diagonalWin = checkDiagonalWin(cells, inp_val);
         let antiDiagonalWin = checkAntiDiagonalWin(cells, inp_val);
 
         if (horizontalWin || verticalWin || diagonalWin || antiDiagonalWin) {
-          // Handle the game-ending condition and declare the winner
           if (horizontalWin) {
             PopUp(horizontalWin);
           } else if (verticalWin) {
@@ -198,11 +196,10 @@ function create_matrix() {
         function checkDraw(cells) {
           for (let i = 0; i < cells.length; i++) {
             if (!cells[i].textContent) {
-              // If any cell is empty, the game is not a draw
               return false;
             }
           }
-          return true; // All cells are filled, and no player has won
+          return true;
         }
 
         if (count >= inp_val * 2 - 1) {
